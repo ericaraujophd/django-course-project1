@@ -4,7 +4,10 @@ from django.shortcuts import render
 
 def home(request):
     # return HTTP Response
-    return HttpResponse("Home")
+    # return HttpResponse("Home")
+    return render(request, 'recipes/home.html', context={
+        'name': 'Eric'
+    })
 
 
 def sobre(request):
